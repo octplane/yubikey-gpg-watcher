@@ -1,0 +1,10 @@
+[package]
+name = "yubikey-gpg-watcher"
+version = "0.1.0"
+authors = ["Pierre BAILLET <pierre.baillet@datadoghq.com>"]
+edition = "2018"
+
+[dependencies]
+
+mac-notification-sys = "0.3"
+proclist = "0.9.2"
