@@ -12,3 +12,5 @@ This script runs on your Apple laptop and watch for git asking GPG to sign a com
 cargo run --release
 ```
 
+![](assets/waiting.png)
+_the notification!_
