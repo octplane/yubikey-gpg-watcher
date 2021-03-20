@@ -7,7 +7,7 @@ fn main() {
     let bundle = get_bundle_identifier_or_default("onepassword7");
     set_application(&bundle).unwrap();
 
-    let one_sec = Duration::from_secs(1);
+    let two_secs = Duration::from_secs(2);
     let mut notified = false;
     loop {
         let mut pid_to_name = HashMap::new();
@@ -37,6 +37,6 @@ fn main() {
             notified = false;
         }
 
-        thread::sleep(one_sec);
+        thread::sleep(two_secs);
     }
 }
