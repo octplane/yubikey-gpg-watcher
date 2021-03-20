@@ -53,7 +53,7 @@ fn main() {
         .value_of_t("notification_body")
         .unwrap_or_else(|e| e.exit());
 
-    let two_secs = Duration::from_secs(duration_in_seconds);
+    let sleep_duration = Duration::from_secs(duration_in_seconds);
     let mut notified = false;
     loop {
         let mut pid_to_name = HashMap::new();
@@ -85,6 +85,6 @@ fn main() {
             notified = false;
         }
 
-        thread::sleep(two_secs);
+        thread::sleep(sleep_duration);
     }
 }

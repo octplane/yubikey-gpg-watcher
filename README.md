@@ -13,4 +13,26 @@ cargo run --release
 ```
 
 ![](assets/waiting.png)
+
 _the notification!_
+
+By default, the notifier watches `git` and `gpg` every `wait_delay` seconds.
+Using a larger wait delay will help you click on the key faster than the notification fires.
+
+```
+USAGE:
+    yubikey-gpg-watcher [FLAGS] [OPTIONS]
+
+FLAGS:
+    -d               print debug information verbosely
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+OPTIONS:
+    -b <notification_body>           body for the notification [default: Press your yubikey,
+                                     something wants your signature!]
+    -t <notification_title>          title to use for the notification [default: Your Yubikey is
+                                     waiting for a press]
+    -w, --wait_delay <wait_delay>    Delay in seconds to wait before firing the notification
+                                     [default: 2]
+```
